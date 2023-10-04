@@ -94,7 +94,7 @@ main div {
     padding-bottom: 2rem;
 }
 
-.metamask_connection, .walletConnect_connection {
+.metamask_connection, .walletConnect_connection, .bitKeep_connection {
     box-sizing: border-box;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -109,6 +109,7 @@ main div {
     border-radius: 10px;
     border: 2px solid #555;
     width: 25rem;
+    height: 6.5rem;
 }
 
 .wallet_button:hover {
@@ -121,6 +122,10 @@ main div {
 
 .wallet_walletConnect_img {
     width: 45%;
+}
+
+.wallet_bitKeep_img {
+    width: 35%;
 }
 
 .wallet_more {
