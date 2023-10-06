@@ -3,7 +3,7 @@
 /**************************/
 /* HEADER */
 .header {
-    font-family: cursive;
+    font-family: "IBM Plex Mono";
     line-height: 1;
     font-weight: 400;
     color: #555;
@@ -20,6 +20,7 @@
     width: 14rem;
     padding-left: 4rem;
 }
+
 
 
 /**************************/
