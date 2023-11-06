@@ -22,6 +22,7 @@
 }
 
 
+
 /**************************/
 /* NAVIGATION */
 .nav-list {
@@ -72,37 +73,81 @@
 }
 
 /**************************/
-/* Products Page */
-
-body {
-    font-family: "IBM Plex Mono";
-}
+/* Wallet Page */
 
 main {
     background-color: #FDF2E9;
 }
 
+main div {
+    text-align: center;
+}
+
+.cart_wallet {
+    font-family: "IBM Plex Mono";
+}
+
+.cart_wallet_text {
+    color: #45260A;
+    padding: 2rem;
+}
+
+.cart_purchase {
+    font-family: "IBM Plex Mono";
+}
+
+.cart_purchase_text {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    color: #45260A;
+}
+
+.cart_purchase_text input {
+    border-radius: 1rem;
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+.cart_purchase_text #cart_buy {
+    background-color: #E67E22;
+}
+
+.cart_purchase_text #cart_buy:hover {
+    background-color: #ce6c17;
+}
+
+.cart_purchase_text #cart_cancel {
+    background-color: #FDF2E9;
+}
+
+.cart_purchase_text #cart_cancel:hover {
+    background-color: #fadfc9;
+}
+
+.cart_purchase table {
+    width: 78rem;
+    font-family: "IBM Plex Mono";
+}
+
+.cart_purchase img {
+    width: 20rem;
+}
+
+.cart_purchase table, .cart_purchase th, .cart_purchase td {
+    border: 1px solid #45260A;
+}
 
 
 /********************
 /** FOOTER **/
 footer {
-    font-family: cursive;
+    font-size: small;
     text-align: center;
     line-height: normal;
 }
 
 footer p {
     margin: 8px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.card {
-    min-height: 500px;
 }
 
 #footer1 {
@@ -119,7 +164,7 @@ img {
 #nav_footer a, #overall a {
     color: whitesmoke;
     text-decoration: none;
-    font-family: "IBM Plex Mono";
+    font-family: Rubik, cursive;
 }
 
 #nav_footer a:hover, #overall a:hover {
@@ -131,6 +176,7 @@ img {
 #nav_footer h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-size: 1.5rem;
     color: burlywood;
 }
 
@@ -145,11 +191,12 @@ img {
 
 #overall h2 {
     margin-top: 2rem;
+    font-size: 1.5rem;
     color:burlywood;
 }
 
 #overall a {
-
+    font-size: 1.25rem;
     line-height: 1.6;
 }
 
@@ -185,7 +232,7 @@ img {
 }
 
 #footer2 p {
-    font-family: "IBM Plex Mono";
+    font-family: Rubik, cursive;
     color: white;
     font-weight: bold;
     font-size: 0.8rem;

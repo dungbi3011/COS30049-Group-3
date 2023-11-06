@@ -60,16 +60,37 @@
     background-color: #cf711f;
 }
 
-.nav_wallet_img , .nav_cart_img {
-    width: 1.8rem;
+.nav_wallet_img {
+  width: 1.8rem;
 }
 
-.nav_cooking_img, .nav_home_img, .nav_transaction_img {
-    width: 2rem;
-  }
+.nav_cooking_img, .nav_home_img, .nav_cart_img {
+  width: 2rem;
+}
 
+.nav_login_img {
+  width: 3rem;
+}
 
 /******Register Page******/
+
+.register_alert {
+  width: 100%;
+  background-color: #FDF2E9;
+  color: red;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+}
+
+.register_success {
+  width: 100%;
+  background-color: #FDF2E9;
+  color: rgb(65, 180, 65);
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+}
 
 main {
   background-color: #FDF2E9;
@@ -96,20 +117,15 @@ main form input {
   border-radius: 2rem;
 }
 
-main button {
-  width: 20rem;
-  padding: 0.5rem;
+main form .register_button {
   background-color: #45260A;
-  color: #FDF2E9;
-  border: 1px solid #555555;
-  border-radius: 2rem;
+  color: white;
   margin-bottom: 2rem;
 }
 
-main button:hover {
+main form .register_button:hover {
   background-color: #683c16;
 }
-
 
 /********FOOTER****/
 footer {

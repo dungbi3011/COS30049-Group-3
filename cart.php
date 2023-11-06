@@ -1,3 +1,21 @@
+<?php
+    if(array_key_exists("buy", $_POST)) { 
+        buy(); 
+    } 
+    else if(array_key_exists("cancel", $_POST)) { 
+        cancel(); 
+    } 
+    function buy() { 
+        session_start();
+        header("Location: profile.php"); 
+    } 
+    function cancel() { 
+        session_start();
+        session_destroy();
+        header("Location: login.php");
+    }
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +36,11 @@
             <div class = "container">   
                 <div class = "cart_wallet">
                     <h2 class = "cart_wallet_text">Your Wallet</h2>
-                    <span>You are currently having *** ETH.</span>
+                    <?php
+                    if (isset($_SESSION["user"])) {
+                        echo "<span> are currently having *** ETH.</span>";
+                    }
+                    ?>
                 </div>
 
                 <div class = "cart_purchase">
@@ -41,7 +63,12 @@
                         </tr>
                     </table>
 
-                    <p class = "cart_purchase_text">Confirm your Purchase:&emsp;<a href="login.php"><button id = "cart_buy">Buy</button></a><a href="product.php"><button id = "cart_cancel" style = "background-color: #FDF2E9;">Cancel</button></a></p>
+                    <form method = "post">
+                        <p class = "cart_purchase_text">Confirm your Purchase:&emsp;
+                            <a href = "profile.php"><input type = "submit" id = "cart_buy" class = "button" name = "buy" value = "Buy"></a>
+                            <a href = "product.php"><input type = "submit" id = "cart_cancel" class = "button" name = "cancel" value = "Cancel"></a>
+                        </p>
+                    </form>
                 </div>
 
             </div>  

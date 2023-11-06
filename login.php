@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION["user"])) {
+  header("Location: cart.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +21,31 @@
 <body>
     <?php include_once './include/header.inc'; ?>
 
+    <?php 
+    if (isset($_POST["login"])) {
+      $username = $_POST["username"];
+      $password = $_POST["password"];
+      require_once "database.php";
+      $sql = "SELECT * FROM login_register WHERE username = '$username'";
+      $result = mysqli_query($conn, $sql);
+      $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+      if ($user) {
+        if (password_verify($password, $user["password"])) {
+          session_start();
+          $_SESSION["user"] = "yes";
+          header("Location: cart.php");
+          die();
+        }
+        else {
+          echo "<div class = 'login_alert'>*Password does not match.</div>";
+        }
+      }
+      else {
+        echo "<div class = 'login_alert'>*Username does not match.</div>";
+      }
+    }
+    ?>
+
     <main>
       <h1 style = "color: #E67E22;" class = "login_introduction">Sign In</h1>
       <p class = "login_introduction">Login your Account to see your Cart.</p>
@@ -22,7 +54,7 @@
         <input type="text" id="username" name="username" required><br><br>
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
-        <input class = "login_signin_button" type="submit" value="Sign In">
+        <input class = "login_signin_button" type="submit" name = "login" value="Sign In">
       </form>
       <a href="register.php"><button>Sign Up</button></a>
     </main>

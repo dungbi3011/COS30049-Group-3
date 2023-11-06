@@ -60,15 +60,37 @@
   background-color: #cf711f;
 }
 
-.nav_wallet_img, .nav_cart_img {
+.nav_wallet_img {
   width: 1.8rem;
 }
 
-.nav_cooking_img, .nav_home_img, .nav_transaction_img {
+.nav_cooking_img, .nav_home_img, .nav_cart_img {
   width: 2rem;
 }
 
+.nav_login_img {
+  width: 3rem;
+}
+
 /*****SignIn Page*****/
+
+.login_alert {
+  width: 100%;
+  background-color: #FDF2E9;
+  color: red;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+}
+
+.login_success {
+  width: 100%;
+  background-color: #FDF2E9;
+  color: rgb(65, 180, 65);
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+}
 
 main {
   background-color: #FDF2E9;
