@@ -6,8 +6,28 @@
         cancel(); 
     } 
     function buy() { 
+        require_once "database.php";
         session_start();
-        header("Location: profile.php"); 
+        if (isset($_SESSION["user"])) {
+            require_once "login.php";
+            $username = $_SESSION["username"];
+            $sql = "
+            INSERT INTO orders (user_id, ID, order_date) VALUES (log.user_id, n.ID, DATETIME)
+            JOIN login_register log ON log.user_id = user_id
+            JOIN nft n ON n.ID = ID
+            WHERE log.username = $username
+            ";
+            if (mysqli_query($conn, $sql)) {
+                echo "Transaction Confirmed.";
+                mysqli_close($conn);
+                header("Location: profile.php"); 
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        }
+        else {
+            header("Location: login.php");
+        }
     } 
     function cancel() { 
         session_start();
@@ -34,14 +54,7 @@
 
         <main>
             <div class = "container">   
-                <div class = "cart_wallet">
-                    <h2 class = "cart_wallet_text">Your Wallet</h2>
-                    <?php
-                    if (isset($_SESSION["user"])) {
-                        echo "<span> are currently having *** ETH.</span>";
-                    }
-                    ?>
-                </div>
+                
 
                 <div class = "cart_purchase">
                     <h2 class = "cart_purchase_text">Your Purchase</h2><br>

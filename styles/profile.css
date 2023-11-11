@@ -74,7 +74,7 @@
 
 /*****SignIn Page*****/
 
-.login_alert {
+.upload_alert {
   width: 100%;
   background-color: #FDF2E9;
   color: red;
@@ -83,7 +83,7 @@
   font-family: "IBM Plex Mono";
 }
 
-.login_success {
+.upload_success {
   width: 100%;
   background-color: #FDF2E9;
   color: rgb(65, 180, 65);
@@ -98,7 +98,8 @@ main {
   text-align: center;
 }
 
-.login_introduction {
+.profile_introduction {
+  color: #E67E22;
   font-family: "IBM Plex Mono";
   padding-top: 2rem;
   text-align: center;
@@ -111,14 +112,16 @@ main form {
 }
 
 main form input {
-  width: 20rem;
+  width: 40rem;
   padding: 0.5rem;
   border: 1px solid #555555;
   border-radius: 2rem;
 }
 
-main form .login_signin_button {
-  background-color: #FDF2E9;
+main form select {
+  width: 40rem;
+  height: 2.5Srem;
+  border-radius: 5rem;
 }
 
 main form .login_signin_button:hover {
@@ -129,8 +132,8 @@ main a {
   text-align: center;
 }
 
-main a button {
-  width: 20rem;
+main form .upload_button {
+  width: 40rem;
   padding: 0.5rem;
   background-color: #45260A;
   color: #FDF2E9;
@@ -139,7 +142,7 @@ main a button {
   margin-bottom: 2rem;
 }
 
-main a button:hover {
+main form .upload_button:hover {
   background-color: #683c16;
 }
 

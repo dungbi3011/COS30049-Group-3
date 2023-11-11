@@ -4,10 +4,10 @@
                 <h2><span>EXPLORE</span></h2>
                 <div id="explore_footer">
                     <p><a href="./home.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Home</a></p>
-                    <p><a href="./product.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Product</a></p>
-                    <p><a href="./transaction.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Transaction</a></p>
-                    <p><a href="./login.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Cart</a></p>
-                    <p><a href="./wallet.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Connect Wallet</a></p>
+                    <p><a href="./product.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Recipes</a></p>
+                    <p><a href="./upload.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Upload</a></p>
+                    <p><a href="./cart.php"><i class="fa-sharp fa-solid fa-angle-right"></i>Cart</a></p>
+                    <p><a href="./login.php"><i class="fa-sharp fa-solid fa-angle-right"></i>User</a></p>
                 </div>
             </div>
             <div id="overall">
